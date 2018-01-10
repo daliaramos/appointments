@@ -1,15 +1,19 @@
 $(document).ready(function() {
-  $("#formOne").submit(function() {
+  $("#formOne").submit(function(event) {
     var nameInput = $("input#name").val();
-    var schedulingInput = $("input#schedling").val();
+    var schedulingInput = $("input#schedulingInput").val();
     var dateInput = $("input#dateInput").val();
-    var start-timeInput = $("input#start-time").val();
-    var end-timeInput = $("input#end-time").val();
+    var startInput = $("input#start").val();
+    var endInput = $("input#end").val();
+
 
     $(".name").text(nameInput);
     $(".scheduling").text(schedulingInput);
     $(".date").text(dateInput);
-    $(".start-time").text(start-timeInput);
-    $(".end-time").text(end-timeInput);
-  })
+    $(".start").text(startInput);
+    $(".end").text(endInput);
+    $("#output").show();
+
+    event.preventDefault();
+ });
 });
